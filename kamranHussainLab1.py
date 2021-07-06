@@ -14,14 +14,14 @@ print('My Foothill Student ID: 20495931\n')
 print('Syllabus Detail 1: The Course CRN: 10433')
 print('Syllabus Detail 2: The textbook for the course is, Starting Out with \n'
       'Python, 5th edition, by Tony Gaddis.\n')
-print('Coding Standards Details 1: Source code lines will be no more than 79 \n'
-      'characters long')
+print('Coding Standards Details 1: Source code lines will be no more than 79\n'
+      ' characters long')
 print('Coding Standards Details 2: Use “CamelCase” style for all class names')
 print('Coding Standards Details 3: Each source code file will contain an \n'
       'introductory block of comments that identifies the assignment and \n'
       'gives a brief overview of the program')
 
-# Program Console Output:
+# Sample Run:
 '''
 Hello, World!
 My Family Name: Hussain
