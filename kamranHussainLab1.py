@@ -8,6 +8,7 @@
 # ###########################################################
 
 # Program Source Code:
+# prints statements to the console.
 print('Hello, World!')
 print('My Family Name: Hussain')
 print('My Foothill Student ID: 20495931\n')
