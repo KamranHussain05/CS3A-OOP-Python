@@ -15,10 +15,7 @@ while n<0:
                     'positive value'))
 
 if n < 10.0:
-    percentage = 0
-    discount = n*percentage
-    print('You win a discount coupon of $' + str(round(discount,2)) +
-          ' (0% of your purchase)')
+    print('You win a discount coupon of $0.00 (0% of your purchase)')
 elif 10 <= n < 60:
     percentage = 0.08
     discount = n*percentage
@@ -38,5 +35,10 @@ elif n >= 210:
     percentage = 0.14
     discount = n*percentage
     print('You win a discount coupon of $' + str(round(discount, 2)) +
-          ' (20% of your purchase)')
+          ' (14% of your purchase)')
+
+# Sample Run:
+'''
+
+'''
 
