@@ -12,7 +12,7 @@ def main():  # alternative function name is groceryCouponCalculator
     n = float(input('Please enter the cost of your groceries: $'))
 
     while n<0:
-        n = float(input('The value you entered is negative, please enter a '
+        n = float(input('The value you entered is negative, please enter a ' +
                         'positive value: '))
 
     if n < 10.0:
