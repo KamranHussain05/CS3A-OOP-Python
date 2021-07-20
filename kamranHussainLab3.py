@@ -11,13 +11,15 @@
 
 # Source code:
 def tester():
-    main('apple')
-    main('-1')
-    main('0')
-    main('10')
-    main('70')
-    main('160')
-    main('222')
+    for i in range (5):
+        main()
+    # main('apple')
+    # main('-1')
+    # main('0')
+    # main('10')
+    # main('70')
+    # main('160')
+    # main('222')
 
 
 def main(b=None):  # alternative function name is groceryCouponCalculator
@@ -92,3 +94,12 @@ if __name__ == '__main__':
     tester()
 
 # Sample Run
+'''
+Please enter the cost of your groceries: $apple
+The value you entered is a character, please enter a numeric value: $-1
+The value you entered is negative, please enter a positive value: $0
+Please enter the cost of your groceries: $10
+Please enter the cost of your groceries: $70
+Please enter the cost of your groceries: $160
+Please enter the cost of your groceries: $222
+'''
