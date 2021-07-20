@@ -11,15 +11,13 @@
 
 # Source code:
 def tester():
-    for i in range (5):
-        main()
-    # main('apple')
-    # main('-1')
-    # main('0')
-    # main('10')
-    # main('70')
-    # main('160')
-    # main('222')
+    main('apple')
+    main('-1')
+    main('0')
+    main('10')
+    main('70')
+    main('160')
+    main('222')
 
 
 def main(b=None):  # alternative function name is groceryCouponCalculator
