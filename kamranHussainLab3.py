@@ -10,57 +10,85 @@
 # ###########################################################
 
 # Source code:
-def main():  # alternative function name is groceryCouponCalculator
-    try:
-        n = float(input('Please enter the cost of your groceries: $'))
-    except ValueError:
-        n = float(input('You entered a letter instead of a number, ' +
-                        'try again: $'))
+def tester():
+    main('apple')
+    main('-1')
+    main('0')
+    main('10')
+    main('70')
+    main('160')
+    main('222')
 
-    while n<0:
-        n = float(input('The value you entered is negative, please enter a ' +
-                        'positive value: '))
+
+def main(b=None):  # alternative function name is groceryCouponCalculator
+    MIN_VALUE = 0
+    if b is not None:
+        n = b
+    else:
+        n = input("Please enter the cost of your groceries: $")
+    while True:
+        try:
+            n = float(n)
+        except ValueError:
+            n = input('The value you entered is a character, please enter a ' +
+                      'numeric value: $')
+        else:
+            if n < MIN_VALUE:
+                n = input(
+                    'The value you entered is negative, please enter a ' +
+                    'positive value: $')
+            else:
+                break
 
     if n < 10.0:
-        calculated_amount = 'You won a discount coupon of $0.00 (0% of your purchase)'
+        calculated_amount = 'You won a discount coupon of $0.00 (0% of your ' \
+                            'purchase) '
         writeToFile(calculated_amount)
-        print(calculated_amount)
+        # print(calculated_amount)
     elif 10 <= n < 60:
         percentage = 0.08
-        discount = n*percentage
+        discount = n * percentage
         formatted_value = "{:.2f}".format(discount)
-        calculated_amount = 'You won a discount coupon of $' + str(formatted_value) +' (8% of your purchase)'
+        calculated_amount = 'You won a discount coupon of $' + str(
+            formatted_value) + ' (8% of your purchase)'
         writeToFile(calculated_amount)
-        print(calculated_amount)
+        # print(calculated_amount)
     elif 60 <= n < 150:
         percentage = 0.10
-        discount = n*percentage
+        discount = n * percentage
         formatted_value = "{:.2f}".format(discount)
-        calculated_amount = 'You won a discount coupon of $' + str(formatted_value) + ' (8% of your purchase)'
+        calculated_amount = 'You won a discount coupon of $' + str(
+            formatted_value) + ' (8% of your purchase)'
         writeToFile(calculated_amount)
-        print(calculated_amount)
+        # print(calculated_amount)
     elif 150 <= n < 210:
         percentage = 0.12
-        discount = n*percentage
+        discount = n * percentage
         formatted_value = "{:.2f}".format(discount)
-        calculated_amount = 'You won a discount coupon of $' + str(formatted_value) + ' (8% of your purchase)'
+        calculated_amount = 'You won a discount coupon of $' + str(
+            formatted_value) + ' (8% of your purchase)'
         writeToFile(calculated_amount)
-        print(calculated_amount)
+        # print(calculated_amount)
     elif n >= 210:
         percentage = 0.14
-        discount = n*percentage
+        discount = n * percentage
         formatted_value = "{:.2f}".format(discount)
-        calculated_amount = 'You won a discount coupon of $' + str(formatted_value) + ' (8% of your purchase)'
+        calculated_amount = 'You won a discount coupon of $' + str(
+            formatted_value) + ' (8% of your purchase)'
         writeToFile(calculated_amount)
-        print(calculated_amount)
+        # print(calculated_amount)
 
+
+# File writing function
 def writeToFile(str):
     outfile = open('kha3out.txt', 'r+')
     outfile.readlines()
     outfile.write(str + '\n')
     outfile.close()
-    print('wrote to file')
+
 
 # program entry point
-if __name__=='__main__':
-    main()
+if __name__ == '__main__':
+    tester()
+
+# Sample Run
