@@ -11,13 +11,6 @@
 
 # Source code:
 def tester():
-    # main('apple')
-    # main('-1')
-    # main('0')
-    # main('10')
-    # main('70')
-    # main('160')
-    # main('222')
     print('Output file: kha3out.txt')
     for i in range(5):
         main()
