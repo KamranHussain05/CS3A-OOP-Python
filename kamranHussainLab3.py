@@ -11,17 +11,21 @@
 
 # Source code:
 def tester():
-    main('apple')
-    main('-1')
-    main('0')
-    main('10')
-    main('70')
-    main('160')
-    main('222')
+    # main('apple')
+    # main('-1')
+    # main('0')
+    # main('10')
+    # main('70')
+    # main('160')
+    # main('222')
+    print('Output file: kha3out.txt')
+    for i in range(5):
+        main()
 
 
-def main(b=None):  # alternative function name is groceryCouponCalculator
+def main(b=None, a=None, c=None):  # alternative function name is groceryCouponCalculator
     MIN_VALUE = 0
+
     if b is not None:
         n = b
     else:
@@ -79,20 +83,20 @@ def main(b=None):  # alternative function name is groceryCouponCalculator
         # print(calculated_amount)
 
 
-# File writing function
-def writeToFile(str):
+def writeToFile(str): # file writing method
     outfile = open('kha3out.txt', 'r+')
     outfile.readlines()
     outfile.write(str + '\n')
     outfile.close()
 
 
-# program entry point
-if __name__ == '__main__':
+if __name__ == '__main__': # program entry point
     tester()
+
 
 # Sample Run
 '''
+Output file: kha3out.txt
 Please enter the cost of your groceries: $apple
 The value you entered is a character, please enter a numeric value: $-1
 The value you entered is negative, please enter a positive value: $0
